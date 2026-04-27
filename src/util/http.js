@@ -6,7 +6,7 @@ export async function fetchEvents({ signal, searchTerm, max }) {
   let url = "http://localhost:3000/events";
 
   if (searchTerm && max) {
-    url += "?search=" + searchTerm + "&max" + max;
+    url += "?search=" + searchTerm + "&max=" + max;
   } else if (searchTerm) {
     url += "?search=" + searchTerm;
   } else if (max) {
